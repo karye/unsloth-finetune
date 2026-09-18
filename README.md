@@ -1,10 +1,10 @@
-# Labb: Träna din egen AI med LoRA
+# Labb: träna din egen AI med LoRA
 
 I den här labben tränar du en språkmodell på ett eget fråge- och svars-dataset. Du använder **LoRA**, en metod som lägger små tränade anpassningar ovanpå en redan kunnig grundmodell. Resultatet blir en AI som bättre följer tonen och ämnet i dina exempel.
 
 Arbeta i notebooken [unsloth_finetune_model.ipynb](unsloth_finetune_model.ipynb). Kör cellerna uppifrån och ned och vänta tills varje cell är klar innan du går vidare.
 
-## Steg 1: Förbered verkstaden
+## Steg 1: förbered verkstaden
 
 Notebooken behöver bibliotek som Unsloth, Transformers och träningsverktyg.
 
@@ -14,7 +14,7 @@ Notebooken behöver bibliotek som Unsloth, Transformers och träningsverktyg.
 
 Om du installerar från terminalen ska du använda projektets Python, till exempel `.venv/bin/python`. Lägg inte `.venv` i GitHub-repot.
 
-## Steg 2: Välj lärobok och grundmodell
+## Steg 2: välj lärobok och grundmodell
 
 I inställningscellen väljer du tre saker:
 
@@ -26,7 +26,7 @@ Byt `csv_fil` om du vill träna på ett annat ämne. Datasetet ska ligga i mappe
 
 Kör inställningscellen med **▶ Run**. Kontrollera utskriften så att rätt dataset, modell och antal steg visas.
 
-## Steg 3: Träna modellen
+## Steg 3: träna modellen
 
 Träningscellen gör flera saker:
 
@@ -46,7 +46,7 @@ Grundmodellen har redan miljarder parametrar. I stället för att ändra alla tr
 
 Det gör träningen snabbare och kräver mindre minne. Grundmodellen är kvar, medan adapterfilerna innehåller det som modellen lärde sig av ditt dataset.
 
-## Steg 4: Exportera som GGUF
+## Steg 4: exportera som GGUF
 
 GGUF är ett modellformat som fungerar bra i program som LM Studio och Ollama.
 
@@ -64,7 +64,7 @@ Kör exportcellen med **▶ Run**. Den färdiga filen får ett namn som visar b�
 
 Om exportmappen redan finns kan cellen återanvända den befintliga GGUF-filen i stället för att skapa en ny export.
 
-## Steg 5: Hitta resultatet
+## Steg 5: hitta resultatet
 
 Varje körning får en egen mapp, till exempel:
 
@@ -78,7 +78,7 @@ Där hittar du vanligtvis:
 
 `gguf_staging` är bara en tillfällig arbetsmapp och tas bort efter en lyckad export.
 
-## Steg 6: Testa modellen
+## Steg 6: testa modellen
 
 I testcellen ändrar du variabeln `test_fraga` till en egen fråga. Testa gärna både en fråga från datasetet och en helt ny fråga om samma ämne.
 
